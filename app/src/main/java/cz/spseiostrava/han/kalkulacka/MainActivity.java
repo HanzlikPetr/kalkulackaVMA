@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int vysledek = Integer.parseInt(number1.getText().toString()) + Integer.parseInt(number2.getText().toString());
-                vylsedek.setText(String.valueOf(vysledek));
+                if(!number1.getText().toString().equals("") && !number2.getText().toString().equals(""))
+                    vylsedek.setText((Double.parseDouble(number1.getText().toString()) +  Double.parseDouble(number2.getText().toString())) + "");
             }
         });
 
